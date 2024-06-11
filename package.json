@@ -1,0 +1,13 @@
+{
+  "name": "darrenterhune.com",
+  "version": "1.0.0",
+  "description": "Personal website",
+  "main": "index.html",
+  "repository": "git@github.com:darrenterhune/darrenterhune.git",
+  "author": "Darren Terhune <darrenterhune@gmail.com>",
+  "license": "None",
+  "private": false,
+  "devDependencies": {
+    "prettier": "^2.7.1"
+  }
+}
