@@ -1,6 +1,6 @@
 ## Hi there 👋
 
-- 🔭 I’m currently working on a personal site
+- 🔭 I’m currently working on a a new web application related to inventory tracking
 - 🌱 I’m currently learning about more advanced turbo/hotwire things
 - 💬 Ask me about anything Ruby on Rails related
 - 📫 How to reach me: darrenterhune@gmail.com
