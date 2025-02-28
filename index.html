@@ -565,6 +565,83 @@
             </h3>
             <div class="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-1">
               <div class="relative">
+                <div class="absolute inset-px rounded-lg bg-white max-lg:rounded-b-[2rem] lg:rounded-r-[2rem]"></div>
+                <div
+                  class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-r-[calc(2rem+1px)]"
+                >
+                  <div class="p-6">
+                    <p class="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">
+                      <a
+                        href="https://gitlab.com/darrenterhune/spec_guardian"
+                        target="_blank"
+                        rel="noopener noreferrer nofollow"
+                        class="text-indigo-700 hover:text-indigo-400 hover:underline"
+                        >Claude Ai Spec Generator</a
+                      >
+                    </p>
+                    <p class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
+                      A Ruby gem that uses AI (Claude) to automatically generate test files for your Rails application
+                      code.
+                    </p>
+                  </div>
+                  <div class="relative min-h-[30rem] w-full grow">
+                    <div
+                      class="absolute top-10 right-0 left-6 overflow-hidden rounded-tl-xl rounded-bl-lg bg-gray-900 shadow-2xl"
+                    >
+                      <div class="flex bg-gray-800/40 ring-1 ring-white/5">
+                        <div class="-mb-px flex text-sm/6 font-medium text-gray-400">
+                          <div
+                            class="border-r border-b border-r-white/10 border-b-white/20 bg-white/5 px-4 py-2 text-white"
+                          >
+                            file_path_resolver.rb
+                          </div>
+                          <div class="border-r border-gray-600/10 px-4 py-2">ai_client.rb</div>
+                        </div>
+                      </div>
+                      <div class="px-6 pt-6 pb-14">
+                        <pre class="text-[0.8125rem]/6 text-gray-300" style="tab-size: 2">
+<code>
+<span class="text-purple-400">def</span> <span class="text-yellow-300">self</span>.<span class="text-blue-400">generate_test</span>(source_code, framework, file_path)
+  client = <span class="text-blue-400">Anthropic</span>::<span class="text-blue-400">Client</span>.<span class="text-purple-400">new</span>(
+    <span class="text-orange-400">access_token:</span> <span class="text-blue-400">SpecGuardian</span>.<span class="text-blue-400">configuration</span>.<span class="text-blue-400">api_key</span>
+  )
+
+  <span class="text-gray-500"># File type detection</span>
+  file_type = <span class="text-blue-400">detect_file_type</span>(file_path)
+
+  <span class="text-gray-500"># Create the prompt</span>
+  prompt = <span class="text-blue-400">create_prompt</span>(source_code, framework, file_type)
+  model = <span class="text-blue-400">SpecGuardian</span>.<span class="text-blue-400">configuration</span>.<span class="text-blue-400">ai_model</span>
+  max_tokens = <span class="text-blue-400">SpecGuardian</span>.<span class="text-blue-400">configuration</span>.<span class="text-blue-400">max_tokens</span> || <span class="text-green-400">20_000</span>
+
+  <span class="text-gray-500"># Make API call</span>
+  response = client.<span class="text-blue-400">messages</span>(
+    <span class="text-orange-400">parameters:</span> {
+      <span class="text-orange-400">model:</span> model,
+      <span class="text-orange-400">max_tokens:</span> max_tokens,
+      <span class="text-orange-400">messages:</span> [
+        {
+          <span class="text-orange-400">role:</span> <span class="text-green-400">'user'</span>,
+          <span class="text-orange-400">content:</span> prompt
+        }
+      ]
+    }
+  )
+
+  <span class="text-gray-500"># Extract and return the test code</span>
+  response[<span class="text-green-400">'content'</span>][<span class="text-green-400">0</span>][<span class="text-green-400">'text'</span>]
+<span class="text-purple-400">end</span>
+</code>
+                        </pre>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="pointer-events-none absolute inset-px rounded-lg ring-1 shadow-sm ring-black/5 max-lg:rounded-b-[2rem] lg:rounded-r-[2rem]"
+                ></div>
+              </div>
+              <div class="relative">
                 <div
                   class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] lg:rounded-l-[calc(2rem+1px)]"
                 >
