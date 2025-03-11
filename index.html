@@ -17,12 +17,12 @@
     <div id="site">
       <header>
         <nav class="bg-white w-full static text-sm px-4">
-          <div class="max-w-screen-xl flex items-center mx-auto">
-            <div class="flex items-center justify-between py-3 py-5 block">
-              <a href="/"><h1 class="text-4xl text-gray-800 font-extrabold mx-auto sm:text-6xl">DT</h1></a>
+          <div class="max-w-screen-xl flex items-center justify-between mx-auto py-3">
+            <div class="flex items-center">
+              <a href="/"><h1 class="text-4xl text-gray-800 font-extrabold sm:text-6xl">DT</h1></a>
             </div>
-            <div class="flex-1">
-              <ul class="text-gray-700 flex justify-end items-center gap-x-12 text-gray-600 font-medium">
+            <div class="flex-1 hidden md:block">
+              <ul class="text-gray-700 flex justify-end items-center gap-x-8 text-gray-600 font-medium">
                 <li class="duration-150 hover:text-gray-900"><a class="block" href="#about">About</a></li>
                 <li class="duration-150 hover:text-gray-900"><a class="block" href="#services">Services</a></li>
                 <li class="duration-150 hover:text-gray-900"><a class="block" href="#projects">Projects</a></li>
@@ -30,11 +30,43 @@
                   <a
                     class="py-2.5 px-4 text-center rounded-lg duration-150 block font-medium text-sm text-white bg-indigo-600 hover:bg-indigo-700 active:bg-indigo-800 md:inline"
                     href="mailto:darrenterhune@gmail.com?subject=I'm interested in working with you&body=Here's some information about my project:"
-                    >Let&#x27;s work</a
+                    >Contact</a
                   >
                 </li>
               </ul>
             </div>
+            <div class="md:hidden flex items-center">
+              <button class="text-gray-600 focus:outline-none" type="button" id="mobile-menu-toggle">
+                <svg
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16m-7 6h7"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="md:hidden hidden" id="mobile-menu">
+            <ul class="text-gray-700 flex flex-col items-end gap-y-2 pb-4 text-gray-600 font-medium">
+              <li class="duration-150 hover:text-gray-900"><a class="block" href="#about">About</a></li>
+              <li class="duration-150 hover:text-gray-900"><a class="block" href="#services">Services</a></li>
+              <li class="duration-150 hover:text-gray-900"><a class="block" href="#projects">Projects</a></li>
+              <li class="duration-150 hover:text-gray-900">
+                <a
+                  class="block"
+                  href="mailto:darrenterhune@gmail.com?subject=I'm interested in working with you&body=Here's some information about my project:"
+                  >Contact</a
+                >
+              </li>
+            </ul>
           </div>
         </nav>
       </header>
@@ -53,7 +85,7 @@
           ></div>
           <div class="relative">
             <section class="px-4">
-              <div class="max-w-screen-xl mx-auto md:flex py-28 text-gray-600">
+              <div class="max-w-screen-xl mx-auto md:flex py-12 md:py-24 text-gray-600">
                 <div class="space-y-5 max-w-4xl mx-auto text-center">
                   <h1 class="text-4xl text-gray-800 font-extrabold mx-auto sm:text-6xl">
                     Transform your Ideas into Robust Web Solutions
@@ -89,8 +121,8 @@
             "
           ></div>
           <div class="relative">
-            <section class="py-16 px-4">
-              <div class="max-w-screen-xl mx-auto md:flex">
+            <section class="px-4">
+              <div class="max-w-screen-xl mx-auto py-12 md:py-24 md:flex">
                 <div class="items-center gap-x-12 lg:flex">
                   <div class="flex-1 sm:hidden lg:block">
                     <img
@@ -111,7 +143,7 @@
                       Hi I'm Darren
                     </h3>
                     <p class="mt-3 text-gray-600">
-                      I am a seasoned Rails engineer with over 17+ years of experience in developing robust web
+                      I am a seasoned Rails engineer with over 18+ years of experience in developing robust web
                       applications. My passion for coding is matched only by my love for the outdoors, where I enjoy
                       surfing, fishing, and exploring nature. When I'm not crafting elegant solutions in Rails, I relish
                       traveling with my family, discovering new places and creating lasting memories together.
@@ -140,8 +172,8 @@
             "
           ></div>
           <div class="relative">
-            <section class="py-20 px-4">
-              <div class="max-w-screen-xl mx-auto text-gray-600">
+            <section class="px-4">
+              <div class="max-w-screen-xl mx-auto py-12 md:py-24 text-gray-600">
                 <div class="max-w-2xl mx-auto space-y-3 sm:text-center">
                   <h3
                     class="mx-auto mt-2 max-w-lg text-center text-4xl font-semibold tracking-tight text-balance text-gray-950 sm:text-5xl"
@@ -368,8 +400,8 @@
             "
           ></div>
           <div class="relative">
-            <section class="py-20 px-4">
-              <div class="max-w-screen-xl mx-auto text-gray-600">
+            <section class="px-4">
+              <div class="max-w-screen-xl mx-auto py-12 md:py-24 text-gray-600">
                 <div class="mx-auto space-y-3 sm:text-center">
                   <h3
                     class="mx-auto mt-2 max-w-lg text-center text-4xl font-semibold tracking-tight text-balance text-gray-950 sm:text-5xl"
@@ -556,8 +588,8 @@
             </section>
           </div>
         </div>
-        <section id="projects" class="bg-gray-50 py-24 sm:py-32">
-          <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
+        <section id="projects" class="bg-gray-50">
+          <div class="mx-auto max-w-2xl py-12 md:py-24 lg:max-w-7xl lg:px-8">
             <h3
               class="mx-auto mt-2 max-w-lg text-center text-4xl font-semibold tracking-tight text-balance text-gray-950 sm:text-5xl"
             >
@@ -801,8 +833,8 @@
             "
           ></div>
           <div class="relative">
-            <section class="py-20 px-4">
-              <div class="max-w-screen-xl mx-auto">
+            <section class="px-4">
+              <div class="max-w-screen-xl py-12 md:py-24 mx-auto">
                 <div class="max-w-2xl sm:text-center md:mx-auto">
                   <h3
                     class="mx-auto mt-2 max-w-lg text-center text-4xl font-semibold tracking-tight text-balance text-gray-950 sm:text-5xl"
@@ -894,6 +926,10 @@
     </div>
     <script>
       document.getElementById('year').innerHTML = new Date().getFullYear();
+      document.getElementById('mobile-menu-toggle').addEventListener('click', function () {
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenu.classList.toggle('hidden');
+      });
     </script>
   </body>
 </html>
