@@ -1,6 +1,6 @@
 ## Hi there 👋
 
-- 🔭 I’m currently working for ScoutSpace and doing iOS/swift things in my spare time
+- 🔭 I’m currently working for ScoutSpace, doing iOS/swift and Ai/n8n etc stuff in my spare time
 - 🌱 I’m currently learning about iOS development in swift
 - 💬 Ask me about anything Ruby on Rails related
 - 📫 How to reach me: darrenterhune@gmail.com
