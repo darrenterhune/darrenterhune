@@ -2,7 +2,7 @@
 <html class="scroll-smooth" lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Darren Terhune | Ruby on Rails Expert</title>
+    <title>Darren Terhune | Ruby on Rails Software Engineering Expert</title>
     <meta
       name="description"
       content="Expert Ruby on Rails Developer offering top-tier web application development services for businesses. Enhance your digital presence with custom, scalable, and efficient solutions tailored to your needs. Let's transform your ideas into reality with robust and reliable web applications."
@@ -447,11 +447,12 @@
                         <h4 class="ml-3 text-lg text-gray-800 font-semibold text-indigo-600">Web Applications</h4>
                       </div>
                       <p class="mt-6">
-                        After 17+ years of writing web applications, I bring a deep understanding of the entire
-                        development lifecycle, from initial concept to deployment and maintenance. My expertise spans
-                        front-end and back-end technologies, ensuring seamless integration and performance. Leveraging
-                        frameworks like Ruby on Rails and tools such as Turbo/Hotwire and Stimulus, I craft robust,
-                        scalable, and interactive web applications tailored to meet diverse business needs.
+                        After <span id="experience-years">20</span>+ years of writing web applications, I bring a deep
+                        understanding of the entire development lifecycle, from initial concept to deployment and
+                        maintenance. My expertise spans front-end and back-end technologies, ensuring seamless
+                        integration and performance. Leveraging frameworks like Ruby on Rails and tools such as
+                        Turbo/Hotwire and Stimulus, I craft robust, scalable, and interactive web applications tailored
+                        to meet diverse business needs.
                       </p>
                     </div>
                     <div>
@@ -608,11 +609,53 @@
             </h3>
             <div class="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-1">
               <div class="relative">
+                <div class="absolute inset-px rounded-lg bg-white max-lg:rounded-t-[2rem] lg:rounded-l-[2rem]"></div>
+                <div
+                  class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)] lg:rounded-l-[calc(2rem+1px)]"
+                >
+                  <div class="p-6">
+                    <p class="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">
+                      <a
+                        href="https://keyva.ai"
+                        target="_blank"
+                        rel="noopener noreferrer nofollow"
+                        class="text-indigo-700 hover:text-indigo-400 hover:underline"
+                        >KeyvaAi
+                      </a>
+                    </p>
+                    <p class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
+                      KeyvaAi generates professional real estate listing videos on demand. No uploads, scripts, or
+                      configuration required. The platform automatically produces polished 30, 45, and 60 second videos
+                      complete with AI voice-over, closed captions, motion animation from listing photos, background
+                      music, an address intro overlay, and an ending QR code CTA, delivered in both 16:9 and 9:16
+                      formats for MLS, Instagram, Facebook, and YouTube. Agents simply connect their listings, get
+                      notified when a watermarked preview is ready, and purchase only the videos they want through a
+                      Stripe-powered per-video checkout. No subscriptions, no busywork.
+                    </p>
+                  </div>
+                  <div class="@container relative min-h-[30rem] w-full grow max-lg:mx-auto">
+                    <div class="absolute inset-x-6 top-10 bottom-10 right-0 overflow-hidden">
+                      <img class="size-full object-cover rounded-l-lg object-left-top" src="images/keyva-ai.avif" />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="pointer-events-none absolute inset-px rounded-lg ring-1 shadow-sm ring-black/5 max-lg:rounded-t-[2rem] lg:rounded-l-[2rem]"
+                ></div>
+              </div>
+              <div class="relative">
                 <div class="absolute inset-px rounded-lg bg-white"></div>
                 <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)]">
                   <div class="p-6">
                     <p class="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">
-                      Inventory &amp; Quoting Software
+                      <a
+                        href="https://walkerboats.com"
+                        target="_blank"
+                        rel="noopener noreferrer nofollow"
+                        class="text-indigo-700 hover:text-indigo-400 hover:underline"
+                      >
+                        Inventory &amp; Quoting Software
+                      </a>
                     </p>
                     <p class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
                       This application leverages Stimulus and Hotwire/Turbo to deliver a snappy, real-time user
@@ -969,6 +1012,7 @@
     </div>
     <script>
       document.getElementById('year').innerHTML = new Date().getFullYear();
+      document.getElementById('experience-years').innerHTML = new Date().getFullYear() - 2006;
       document.getElementById('mobile-menu-toggle').addEventListener('click', function () {
         const mobileMenu = document.getElementById('mobile-menu');
         mobileMenu.classList.toggle('hidden');
